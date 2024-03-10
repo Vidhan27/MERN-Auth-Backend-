@@ -18,8 +18,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 //ROUTES
-app.get('/', (req, res) => {
-    res.send('Hello World');
+app.use('/', (req, res) => {
+    res.json({message:""Hello});
 });
 
 //API
