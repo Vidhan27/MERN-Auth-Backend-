@@ -3,8 +3,13 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 const cors = require('cors');
-
-app.use(cors());
+const corsConfig = {
+    origin:"*",
+    credential : true,
+    methods :['GET','POST','PUT','DELETE'],
+};
+app.options("",cors(corsConfig));
+app.use(cors(corsConfig));
 
 const dbConnect = require('./config/dbConnect');
 
