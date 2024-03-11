@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const app = express();
 const cors = require('cors');
 const corsConfig = {
-    origin:"*",
+    origin:"https://mern-auth-backend-psi.vercel.app/",
     credential : true,
     methods :['GET','POST','PUT','DELETE'],
 };
